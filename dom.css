@@ -1,3 +1,11 @@
 .selected {
     border: 5px solid green;
 }
+
+/* .toggle {
+    visibility: visible;
+} */
+
+.hidden {
+   display: none;
+}
