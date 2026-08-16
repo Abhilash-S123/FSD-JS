@@ -5,6 +5,8 @@ const toggle = document.querySelector('#toggle')
 const userName = document.querySelector('#userName')
 const charCount = document.querySelector('#charCount')
 const submitBtn = document.querySelector('#submitBtn')
+const message = document.querySelector('#message')
+const userForm = document.querySelector('#userForm')
 
 
 console.log(cardTitle);
@@ -29,6 +31,14 @@ userName.addEventListener('input', (e) => {
       charCount.style.color = userName.length > 10 ? 'red' : 'green'
 })
 
-submitBtn.addEventListener('submit', (e) => {
+userForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+     const para = document.createElement('p')
+     // console.log(userName.value);
+     para.textContent = userName.value
+     message.appendChild(para)
+     
+     
+
 
 })
