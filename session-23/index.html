@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       localStorage.setItem('name', 'abhilash')
+       let name = localStorage.getItem('name')
+       localStorage.removeItem('name')
+       console.log('name' ,localStorage.getItem('name'));
+       localStorage.clear()
+
+       sessionStorage.setItem('name', 'anoop')
+       let name1 = sessionStorage.getItem('name')
+       console.log(name1);
+       
+       
+    </script>
+</body>
+</html>

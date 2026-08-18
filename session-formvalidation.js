@@ -5,7 +5,7 @@ const password = document.querySelector('#password')
 const confirmPassword = document.querySelector('#confirm-password')
 const successMessage = document.querySelector('#success-message')
 
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;         // regular expression for email
 
 // Helper functions
 function showError(fieldId, message) {
