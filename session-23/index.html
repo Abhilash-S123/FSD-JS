@@ -7,17 +7,50 @@
 </head>
 <body>
     <script>
-       localStorage.setItem('name', 'abhilash')
-       let name = localStorage.getItem('name')
-       localStorage.removeItem('name')
-       console.log('name' ,localStorage.getItem('name'));
-       localStorage.clear()
+    //    localStorage.setItem('name', 'abhilash')
+    //    let name = localStorage.getItem('name')
+    //    localStorage.removeItem('name')
+    //    console.log('name' ,localStorage.getItem('name'));
+    //    localStorage.clear()
 
-       sessionStorage.setItem('name', 'anoop')
-       let name1 = sessionStorage.getItem('name')
-       console.log(name1);
+    //    sessionStorage.setItem('name', 'anoop')
+    //    let name1 = sessionStorage.getItem('name')
+    //    console.log(name1);
        
+    // const userDetails = {
+    //     id : 1,
+    //     name : 'Abhilash'
+    // }
+
+    // localStorage.setItem('userDetails', JSON.stringify(userDetails))
+    // const userDetailsObj = JSON.parse(localStorage.getItem('userDetails'))
+    // console.log(userDetailsObj);
+
+    const student = {
+        name: 'Abhilash',
+        showName() {
+           console.log('hello', this.name);        
+        }
+    }
+
+    // student.showName()
+    // const stdFn = student.showName      Improper way
+    // const stdFn =student.showName.bind(student)      // Proper way
+    // stdFn()
        
+
+    const user = {
+        name: 'Anoop'
+    }
+
+    function greet(city, city1) {
+        console.log(`hi I am ${this.name} from ${city1}`);
+    }
+
+    greet.call(user, 'tvm', 'kochi')
+    greet.apply(user, ['tvm', 'kochi'])
+
+
     </script>
 </body>
 </html>
