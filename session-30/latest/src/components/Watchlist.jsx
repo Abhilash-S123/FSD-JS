@@ -3,11 +3,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Cards from "./Cards";
 
-const Watchlist = ({ watchList , setwatchList }) => {
-
+const Watchlist = ({ watchList, setwatchList }) => {
   const deleteFunction = (id) => {
-   setwatchList(watchList.filter((film) => film.id !== id )
-   )
+    setwatchList(watchList.filter((film) => film.id !== id));
     // updatedWatchList = updatedWatchList.filter((film) => film.id !== id);
   };
 

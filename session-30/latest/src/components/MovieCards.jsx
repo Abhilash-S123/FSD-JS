@@ -14,7 +14,7 @@ const MovieCards = () => {
   const [watchlistBoolean, setWatchlistBoolean] = useState(true);
 
   const addToWatchList = (film) => {
-   if (watchlist.some((cinema) => cinema === film )) return
+    if (watchlist.some((cinema) => cinema === film)) return;
     setWatchlist([...watchlist, film]);
   };
 
@@ -27,21 +27,17 @@ const MovieCards = () => {
   const fetchApi = async () => {
     try {
       const resp = await axios.get("https://api.tvmaze.com/shows");
-      setMovies(resp.data);
-      setLoader(true);
+      setMovies(resp.data);     
     } catch (error) {
       console.log(error);
     } finally {
+      setLoader(true);
     }
   };
 
   useEffect(() => {
     fetchApi();
   }, []);
-
-  useEffect(() => {
-    console.log(watchlist);
-  }, [watchlist]);
 
   if (loader)
     return (
