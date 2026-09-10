@@ -14,6 +14,7 @@ const MovieCards = () => {
   const [watchlistBoolean, setWatchlistBoolean] = useState(true);
 
   const addToWatchList = (film) => {
+   if (watchlist.some((cinema) => cinema === film )) return
     setWatchlist([...watchlist, film]);
   };
 
@@ -100,7 +101,7 @@ const MovieCards = () => {
             </Container>
           )
         ) : (
-          <Watchlist watchlist={watchlist} />
+          <Watchlist watchList={watchlist} setwatchList={setWatchlist} />
         )}
       </>
     );

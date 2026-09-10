@@ -3,18 +3,20 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Cards from "./Cards";
 
-const Watchlist = ({ watchlist }) => {
-  let updatedWatchList;
+const Watchlist = ({ watchList , setwatchList }) => {
+
   const deleteFunction = (id) => {
-    updatedWatchList = watchlist.filter((movie) => movie.id !== id);
+   setwatchList(watchList.filter((film) => film.id !== id )
+   )
+    // updatedWatchList = updatedWatchList.filter((film) => film.id !== id);
   };
 
   return (
     <>
-      {watchlist.length > 0 ? (
+      {watchList.length > 0 ? (
         <Container>
           <Row xs={1} md={4}>
-            {watchlist.map((movie) => (
+            {watchList.map((movie) => (
               <div key={movie.id}>
                 <Cards
                   list={[]}
@@ -29,7 +31,7 @@ const Watchlist = ({ watchlist }) => {
                   onClick={() => {
                     deleteFunction(movie.id);
                   }}
-                  className="btn btn-danger w-100 "
+                  className="btn btn-danger w-100  "
                 >
                   Remove
                 </button>
