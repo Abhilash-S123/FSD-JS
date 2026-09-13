@@ -14,7 +14,7 @@ const Cards = ({
   addToWatchList,
   list,
 }) => {
-  const [exist, setExist] = useState(false);
+  const [exist, setExist] = useState(false); 
   const filmExist = list.some((movie) => movie.id === id);
 
   useEffect(() => {
