@@ -1,0 +1,15 @@
+import { useState } from 'react'
+import MovieApp from './components/MovieApp'
+
+
+function App() {
+
+
+  return (
+    <>
+     <MovieApp></MovieApp>
+    </>
+  )
+}
+
+export default App

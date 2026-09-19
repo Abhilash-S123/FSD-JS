@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "react-bootstrap": "^2.10.10"
+    "create": "^0.5.5",
+    "latest": "^0.2.0",
+    "react-bootstrap": "^2.10.10",
+    "vite": "^8.3.0"
   }
 }
