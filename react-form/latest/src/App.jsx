@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import MovieApp from './components/MovieApp'
-
+import { useState } from "react";
+import MovieApp from "./components/MovieApp";
 
 function App() {
-
-
   return (
     <>
-     <MovieApp></MovieApp>
+      <MovieApp></MovieApp>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
