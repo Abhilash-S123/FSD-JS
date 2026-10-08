@@ -3,7 +3,7 @@ import React, { useReducer } from "react";
 const initialState = 0;
 
 const reducer = (state, action) => {
-  switch (action.type) {
+  switch (action.type) { 
     case "increment":
       return state + 1;
 

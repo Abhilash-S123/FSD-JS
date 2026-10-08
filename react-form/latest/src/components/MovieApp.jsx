@@ -18,7 +18,7 @@ const MovieCards = () => {
   const [selectedMovies, setSelectedMovies] = useState(null);
 
   const [bookingData, setBookingData] = useState({
-    movie: "",
+    movie: '',
     date: "",
     time: "",
     seatType: "",
@@ -27,6 +27,11 @@ const MovieCards = () => {
     request: "",
     agree: false,
   });
+
+  if (bookingData.movie ) {
+    console.log('hilll');
+    
+  }
 
   console.log(bookingData);
 
